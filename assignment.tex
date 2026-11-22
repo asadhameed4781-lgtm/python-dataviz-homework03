@@ -1,0 +1,67 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.8em}
+\pagestyle{empty}
+
+\begin{document}
+\textbf{Data Visualization and Storytelling: Homework 2}
+
+\textbf{Deadline: Monday, 30 November 2026.}
+
+A product can be made in one country and consumed in another. We can
+therefore count its emissions where production takes place or attribute
+them to the country where the product is consumed.
+
+\textbf{Question}
+
+How does accounting for international trade change the geographical pattern
+of CO\textsubscript{2} emissions per person in 2023?
+
+Create \textbf{one figure} that answers this question. Show where accounting
+for trade raises or lowers emissions per person, and by how much.
+Choose the visual form yourself.
+
+\textbf{Data}
+
+Use the files included in the homework repository:\newline
+\url{https://github.com/ulrichwohak/python-dataviz-homework03}.
+
+The file \texttt{data/co2\_2023.csv} contains one row per country for 2023.
+Use these two columns:
+
+\texttt{co2\_per\_capita} measures \textbf{territorial emissions per person}:
+CO\textsubscript{2} released within a country's borders, divided by its population.
+
+\texttt{consumption\_co2\_per\_capita} measures
+\textbf{consumption-based emissions per person}. It adjusts territorial
+emissions by adding emissions from producing imports and subtracting emissions
+from producing exports, then divides by the country's population.
+
+Both columns are measured in \textbf{tonnes of CO\textsubscript{2} per person
+per year}. Both cover fossil fuels and industrial processes and exclude
+land-use change. Some countries have no consumption-based estimate;
+a missing value does not mean zero emissions.
+
+Country boundaries are in \texttt{data/countries.geojson}.
+The \texttt{iso\_code} column identifies countries in both files.
+Further definitions and sources are in \texttt{data/README.md}.
+Sources: \href{https://github.com/owid/co2-data}{Our World in Data / Global Carbon Budget}
+and \href{https://www.naturalearthdata.com/}{Natural Earth}.
+
+\textbf{Submission}
+
+Fork the homework repository to your own GitHub account and clone your fork.
+Save \textbf{only your final figure, with its title and notes attached}, as
+\texttt{figures/submission.pdf} or \texttt{figures/submission.png}.
+The figure must communicate your answer without a separate written response.
+The notes should state the units, year, sources and any country exclusions.
+
+\textbf{Commit and push the figure to the main branch of your fork by
+Monday, 30 November 2026.} Check that the file appears on GitHub and opens
+correctly. The repository's \texttt{README.md} gives the exact commands.
+No code submission or pull request is required.
+\end{document}
